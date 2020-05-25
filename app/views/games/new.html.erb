@@ -1,0 +1,21 @@
+<h1><strong>New Game</strong></h1>
+<ul>
+<li><%=@letters[0].capitalize%></li>
+<li><%=@letters[1].capitalize%></li>
+<li><%=@letters[2].capitalize%></li>
+<li><%=@letters[3].capitalize%></li>
+<li><%=@letters[4].capitalize%></li>
+<li><%=@letters[5].capitalize%></li>
+<li><%=@letters[6].capitalize%></li>
+<li><%=@letters[7].capitalize%></li>
+<li><%=@letters[8].capitalize%></li>
+<li><%=@letters[9].capitalize%></li>
+</ul>
+
+<form action="/score" method = "post">
+  <label>What is the longest word you can find?</label>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+  <input type="text" name="new" placeholder="write a word">
+  <input class= "color" type="submit" value="Play">
+</form>
